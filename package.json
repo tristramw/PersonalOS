@@ -1,0 +1,41 @@
+{
+  "name": "personal-os",
+  "version": "0.1.0",
+  "description": "Goal alignment system — values through daily tasks",
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "tsx watch server/index.ts",
+    "dev:web": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "start": "NODE_ENV=production tsx server/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tristramw/PersonalOS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tristramw/PersonalOS/issues"
+  },
+  "homepage": "https://github.com/tristramw/PersonalOS#readme",
+  "private": "true",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "concurrently": "^10.0.4",
+    "tsx": "^4.23.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.0"
+  }
+}

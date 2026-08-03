@@ -1,0 +1,10 @@
+node_modules/
+dist/
+
+# Your actual goals and values. Never commit these — this repo is public.
+data/
+
+# Anthropic API key
+.env
+
+.DS_Store
